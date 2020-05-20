@@ -14,43 +14,43 @@ echo
 
 if [ ! -f data/mat_1000x1000.txt ]; then
     echo "1000x1000 Matris oluşturuluyor.."
-    python random_float_matrix.py 1000 1000 > data/mat_1000x1000.txt
+    python generator/random_float_matrix.py 1000 1000 > data/mat_1000x1000.txt
 fi
 
 if [ ! -f data/mat_1000x1000b.txt ]; then
-    python random_float_matrix.py 1000 1000 > data/mat_1000x1000b.txt
+    python generator/random_float_matrix.py 1000 1000 > data/mat_1000x1000b.txt
 fi
 
 if [ ! -f data/mat_2000x2000.txt ]; then
     echo "2000x2000 Matris oluşturuluyor.."
-    python random_float_matrix.py 2000 2000 > data/mat_2000x2000.txt
+    python generator/random_float_matrix.py 2000 2000 > data/mat_2000x2000.txt
 fi
 if [ ! -f data/mat_2000x2000b.txt ]; then
-    python random_float_matrix.py 2000 2000 > data/mat_2000x2000b.txt
+    python generator/random_float_matrix.py 2000 2000 > data/mat_2000x2000b.txt
 fi
 
 if [ ! -f data/mat_3000x3000.txt ]; then
     echo "3000x3000 Matris oluşturuluyor.."
-    python random_float_matrix.py 3000 3000 > data/mat_3000x3000.txt
+    python generator/random_float_matrix.py 3000 3000 > data/mat_3000x3000.txt
 fi
 if [ ! -f data/mat_3000x3000b.txt ]; then
-    python random_float_matrix.py 3000 3000 > data/mat_3000x3000b.txt
+    python generator/random_float_matrix.py 3000 3000 > data/mat_3000x3000b.txt
 fi
 
 if [ ! -f data/mat_4000x4000.txt ]; then
     echo "4000x4000 Matris oluşturuluyor.."
-    python random_float_matrix.py 4000 4000 > data/mat_4000x4000.txt
+    python generator/random_float_matrix.py 4000 4000 > data/mat_4000x4000.txt
 fi
 if [ ! -f data/mat_4000x4000b.txt ]; then
-    python random_float_matrix.py 4000 4000 > data/mat_4000x4000b.txt
+    python generator/random_float_matrix.py 4000 4000 > data/mat_4000x4000b.txt
 fi
 
 if [ ! -f data/mat_5000x5000.txt ]; then
     echo "5000x5000 Matris oluşturuluyor.."
-    python random_float_matrix.py 5000 5000 > data/mat_5000x5000.txt
+    python generator/random_float_matrix.py 5000 5000 > data/mat_5000x5000.txt
 fi
 if [ ! -f data/mat_5000x5000b.txt ]; then
-    python random_float_matrix.py 5000 5000 > data/mat_5000x5000b.txt
+    python generator/random_float_matrix.py 5000 5000 > data/mat_5000x5000b.txt
 fi
 
 echo ".----------------."

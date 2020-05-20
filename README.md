@@ -4,27 +4,28 @@
     "|        Ahmetcan İRDEM - 357405 - II. Öğretim        |"
     ".-----------------------------------------------------."
 
-##### Parallel  OpenMP Kullanarak Matris Çarpımı
+##### Parallel OpenMP Kullanarak Matris Çarpımı
 
-## Assignment
-The multiplication of two matrices is to be implemented as 
+## Özet
+Karadeniz Teknik Üniversitesi, Bilgisayar Mühendisliği Paralel Bilgisayarlar dersi projesi için buradayız. Burada hem sıralı bir şekilde lineer matris çarpımı, hemde OpenMP kullanılarak çoklu matris çarpımı yapılacaktır. Buradaki amaç tek CPU üzerinde yapılan işlemi parçalara bölerek en çok işlemi en kısa sürede yapmaktır. 
 
-* a sequential program 
-* an OpenMP shared memory program 
-* an explicitly threaded program (using the pthread standard) 
-* a message passing program using the MPI standard 
+Dersin Sorumlusu: Dr. İbrahim SAVRAN
+Projenin Konusu : Sistem Bilgisini İnceleme ve Matris Çarpımı
 
-## Matrix multiplication
+## Amaç
+Bilgisayarınızın özelliklerini incelemek ve bu özelliklerin Matris çarpma işlemine etkisi.
+
+
 The aim is to multiply two matrices together.To multiply two matrices, the number of columns of the first matrix has to match the number of lines of the second matrix. The calculation of the matrix solution has independent steps, it is possible to parallelize the calculation.
 
 ## Project Tree
 
     .
     |-- bin
-    |   |-- mpi
-    |   |-- omp
     |   |-- seq
-    |   `-- thread2
+    |   |-- omp
+    |   |-- f_seq
+    |   `-- f_omp
     |-- data
     |   |-- mat_4_5.txt
     |   `-- mat_5_4.txt

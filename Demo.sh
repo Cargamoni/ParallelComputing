@@ -15,41 +15,41 @@ echo
 if [ ! -f data/mat_2x2.txt ]; then
     echo "Demonstrasyon için;"
     echo "2x2 Matris oluşturuluyor.."
-    python random_float_matrix.py 2 2 > data/mat_2x2.txt
+    python generator/dom_float_matrix.py 2 2 > data/mat_2x2.txt
 fi
 
 if [ ! -f data/mat_2x2b.txt ]; then
-    python random_float_matrix.py 2 2 > data/mat_2x2b.txt
+    python generator/dom_float_matrix.py 2 2 > data/mat_2x2b.txt
 fi
 
 if [ ! -f data/mat_5x5txt ]; then
     echo "Demonstrasyon için;"
     echo "5x5 Matris oluşturuluyor.."
-    python random_float_matrix.py 5 5 > data/mat_5x5.txt
+    python generator/dom_float_matrix.py 5 5 > data/mat_5x5.txt
 fi
 
 if [ ! -f data/mat_5x5b.txt ]; then
-    python random_float_matrix.py 5 5 > data/mat_5x5b.txt
+    python generator/dom_float_matrix.py 5 5 > data/mat_5x5b.txt
 fi
 
 if [ ! -f data/one_2x2.txt ]; then
     echo "Demonstrasyon için;"
     echo "2x2 Oneris oluşturuluyor.."
-    python one_float_matrix.py 2 2 > data/one_2x2.txt
+    python generator/one_float_matrix.py 2 2 > data/one_2x2.txt
 fi
 
 if [ ! -f data/one_2x2b.txt ]; then
-    python one_float_matrix.py 2 2 > data/one_2x2b.txt
+    python generator/one_float_matrix.py 2 2 > data/one_2x2b.txt
 fi
 
 if [ ! -f data/one_5x5txt ]; then
     echo "Demonstrasyon için;"
     echo "5x5 Oneris oluşturuluyor.."
-    python one_float_matrix.py 5 5 > data/one_5x5.txt
+    python generator/one_float_matrix.py 5 5 > data/one_5x5.txt
 fi
 
 if [ ! -f data/one_5x5b.txt ]; then
-    python one_float_matrix.py 5 5 > data/one_5x5b.txt
+    python generator/one_float_matrix.py 5 5 > data/one_5x5b.txt
 fi
 
 echo ".----------------."
