@@ -1,10 +1,10 @@
 
-".-----------------------------------------------------."
-"| KTÜ Bilgisayar Mühendisliği - Paralel Bilgisayarlar |"
-"|        Ahmetcan İRDEM - 357405 - II. Öğretim        |"
-".-----------------------------------------------------."
+    ".-----------------------------------------------------."
+    "| KTÜ Bilgisayar Mühendisliği - Paralel Bilgisayarlar |"
+    "|        Ahmetcan İRDEM - 357405 - II. Öğretim        |"
+    ".-----------------------------------------------------."
 
-##### Parallel Matrix Multiplication Using OpenMP, Phtreads, and MPI 
+##### Parallel  OpenMP Kullanarak Matris Çarpımı
 
 ## Assignment
 The multiplication of two matrices is to be implemented as 
