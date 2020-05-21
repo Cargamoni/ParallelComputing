@@ -36,7 +36,7 @@ Proje üzerindeki çalışma, GNU/Linux sistemler üzerinde denenmiş ve çalı�
             - Normalde yüklü olarak geliyor, ancak nasıl kullanıldığını bilmiyorum.
             GNU/Linux sistemlerde çalıştığım için araştırılıp öğrenilebilir.
 
-### Kuıllanımı
+### Kullanımı
 Aslında kullanımı gayet basit, öncelikle algoritmanın ve kodların çalıştığını Demo.sh çalıştırılarak görülebilir. Öncelikle bu komutu nasıl çalıştırıldığını ve çıktıya göz atalım. Bu bir Bash Betiğidir, çalıştırıldığı zaman içerisindeki Bash komutlarını sizin yerinize çalıştırılmaktadır. Bu oluşturulma esnasında olası hataların sebebi, gereksinimleri karşılayamamızdır, bir başka sebebi de bin veya data dizinleri proje dizini içerisinde yoksa, 'no such file or directory' hatası alınabilir.
 
 Demo.sh Betiği, 2 adet 2x2 Matris, 2 adet 5x5 Matris, 2 adet 2x2 Oneris (1'lerden oluşan matris, evet ben uydurdum.) ve son olarak da 2 adet 5x5 Oneris oluşturur. Daha sonra bunlar üzerinde matris çarpımını yaparak ekrana yazdırır. Hem demo hemde asıl programın koşması sırasıyla şu şekildedir,
@@ -56,6 +56,53 @@ Demo.sh Betiği, 2 adet 2x2 Matris, 2 adet 5x5 Matris, 2 adet 2x2 Oneris (1'lerd
 Proje dosyalarının içierisindeyken aşağıdaki komut ile beraber betik çalıştırılır.
 
 `cargamoni@universe:~/ParallelComputing$ ./Demo.sh`
+    
+    .-----------------------------------------------------.
+    | KTÜ Bilgisayar Mühendisliği - Paralel Bilgisayarlar |
+    |        Ahmetcan İRDEM - 357405 - II. Öğretim        |
+    .-----------------------------------------------------.
+
+    Test Matrisleri Oluşturuluyor, eğer test matrisleri mevcutsa yeniden oluşturulmayacaktır.
+
+    Demonstrasyon için;
+    5x5 Matris oluşturuluyor..
+    Demonstrasyon için;
+    5x5 Oneris oluşturuluyor..
+    .----------------.
+    | Derleme İşlemi |
+    .----------------.
+    gcc -O2 -Wall -std=gnu99 -g -fopenmp -o bin/seq src/matrix.c src/sequential.c
+    gcc -O2 -Wall -std=gnu99 -g -fopenmp -o bin/omp src/matrix.c src/omp.c
+    gcc -O2 -Wall -std=gnu99 -g -fopenmp -o bin/f_seq src/f_matrix.c src/f_sequential.c
+    gcc -O2 -Wall -std=gnu99 -g -fopenmp -o bin/f_omp src/f_matrix.c src/f_omp.c
+
+    .---------------.
+    | Demonstrasyon |
+    .---------------.
+    Matris A:
+    9474.76324142   372.770098359
+    1756.59262156   2958.4630542
+
+    Matris B:
+    8731.12749238   4683.8546868
+    1999.15220655   1127.46641697
+
+    Sonuç Seri Duble:
+    83470589.985624 44798699.981796
+    21251452.073815 11563192.322749
+
+    Sonuç OpenMP Double:
+    83470589.985624 44798699.981796
+    21251452.073815 11563192.322749
+
+    Sonuç Seri Float:
+    83470600.000000 44798700.000000
+    21251452.000000 11563192.000000
+
+    Sonuç OpenMP Float:
+    83470600.000000 44798700.000000
+    21251452.000000 11563192.000000
+
 
 
 The aim is to multiply two matrices together.To multiply two matrices, the number of columns of the first matrix has to match the number of lines of the second matrix. The calculation of the matrix solution has independent steps, it is possible to parallelize the calculation.
