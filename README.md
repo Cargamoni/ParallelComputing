@@ -138,10 +138,15 @@ Betik sırasıyla 1000x1000, 2000x2000, 3000x3000, 4000x4000 ve son olarak 5000x
     .-------------------------------------------------------------------------------------.
     Seri çarpım ile geçem süre   :    0m4.444s REAL
     OpenMP ile geçen toplam süre :    0m3.199s REAL
-    .
-    .
-    .
 
+Diğer çarpım işlemlerinin sonuçları da betik çalıştırılarak sonuçlar kendi bilgisayarınızda gözlemleyebilirsiniz.
+
+## Proje Soruları
+
+### 1. Bilgisayarınızın FLOP/s kapasitesi nedir ?
+lscpu komutuna göre Intel(R) Core(TM) i7-6700HQ mimarisinde 4 Adet Core 8 adet CPU mevcuttur. Her Core üzerinde de 2 Thread mevcuttur. CPU taban frekansı 2.6 GHz'dır. 
+
+![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/IEEE_754_Double_Floating_Point_Format.svg/1236px-IEEE_754_Double_Floating_Point_Format.svg.png)
 
 
 
