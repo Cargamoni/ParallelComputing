@@ -55,8 +55,7 @@ Demo.sh Betiği, 2 adet 2x2 Matris, 2 adet 5x5 Matris, 2 adet 2x2 Oneris (1'lerd
 
 Proje dosyalarının içierisindeyken aşağıdaki komut ile beraber betik çalıştırılır.
 
-`cargamoni@universe:~/ParallelComputing$ ./Demo.sh`
-    
+    $ ./Demo.sh
     .-----------------------------------------------------.
     | KTÜ Bilgisayar Mühendisliği - Paralel Bilgisayarlar |
     |        Ahmetcan İRDEM - 357405 - II. Öğretim        |
@@ -102,16 +101,12 @@ Proje dosyalarının içierisindeyken aşağıdaki komut ile beraber betik çal�
     Sonuç OpenMP Float:
     83470600.000000 44798700.000000
     21251452.000000 11563192.000000
-    .
-    .
-    .
 
 Demo betiği çalıştırıldığı zaman yukarıdaki gibi bir çıktı göreceksiniz, burada matris çarpımının doğru bir şekilde yapıldığını görebilirsiniz. İlerleyen adımlarda diğer sonuçları da gösterilmektedir. Burada bir kısmı yer almaktadır, lütfen Demo.sh betiğini çalıştırıp gözlemleyin. Aşağıda da projenin asıl yapılış amacının gerçeklenmesi gösterilecektir.
 
 Betik sırasıyla 1000x1000, 2000x2000, 3000x3000, 4000x4000 ve son olarak 5000x5000 matris çarpımları yapmaktadır. Seri çarpım ile Paralel çarpım işlemleri arasındaki, ekstra olarak da Double ve Float veri tipleri arasındaki seri ve Paralel çarpım işlemlerinin ne kadar sürede tamamlandığı izlenmektedir. Bu sürelerin değerlendirilmesi yapılıp, üzerine FLOP/s hesaplamaları yapılacaktır. Aşağıdaki gibi çalıştırılabilir.
 
-`cargamoni@universe:~/ParallelComputing$ ./RunMe.sh`
-
+    $ ./RunMe.sh
     .-----------------------------------------------------.
     | KTÜ Bilgisayar Mühendisliği - Paralel Bilgisayarlar |
     |        Ahmetcan İRDEM - 357405 - II. Öğretim        |
