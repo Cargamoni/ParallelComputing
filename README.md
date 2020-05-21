@@ -102,6 +102,51 @@ Proje dosyalarının içierisindeyken aşağıdaki komut ile beraber betik çal�
     Sonuç OpenMP Float:
     83470600.000000 44798700.000000
     21251452.000000 11563192.000000
+    .
+    .
+    .
+
+Demo betiği çalıştırıldığı zaman yukarıdaki gibi bir çıktı göreceksiniz, burada matris çarpımının doğru bir şekilde yapıldığını görebilirsiniz. İlerleyen adımlarda diğer sonuçları da gösterilmektedir. Burada bir kısmı yer almaktadır, lütfen Demo.sh betiğini çalıştırıp gözlemleyin. Aşağıda da projenin asıl yapılış amacının gerçeklenmesi gösterilecektir.
+
+Betik sırasıyla 1000x1000, 2000x2000, 3000x3000, 4000x4000 ve son olarak 5000x5000 matris çarpımları yapmaktadır. Seri çarpım ile Paralel çarpım işlemleri arasındaki, ekstra olarak da Double ve Float veri tipleri arasındaki seri ve Paralel çarpım işlemlerinin ne kadar sürede tamamlandığı izlenmektedir. Bu sürelerin değerlendirilmesi yapılıp, üzerine FLOP/s hesaplamaları yapılacaktır. Aşağıdaki gibi çalıştırılabilir.
+
+`cargamoni@universe:~/ParallelComputing$ ./RunMe.sh`
+
+    .-----------------------------------------------------.
+    | KTÜ Bilgisayar Mühendisliği - Paralel Bilgisayarlar |
+    |        Ahmetcan İRDEM - 357405 - II. Öğretim        |
+    .-----------------------------------------------------.
+
+    Test Matrisleri Oluşturuluyor, eğer test matrisleri mevcutsa yeniden oluşturulmayacaktır.
+
+    .----------------.
+    | Derleme İşlemi |
+    .----------------.
+    gcc -O2 -Wall -std=gnu99 -g -fopenmp -o bin/seq src/matrix.c src/sequential.c
+    gcc -O2 -Wall -std=gnu99 -g -fopenmp -o bin/omp src/matrix.c src/omp.c
+    gcc -O2 -Wall -std=gnu99 -g -fopenmp -o bin/f_seq src/f_matrix.c src/f_sequential.c
+    gcc -O2 -Wall -std=gnu99 -g -fopenmp -o bin/f_omp src/f_matrix.c src/f_omp.c
+
+    .------------------.
+    | Hesaplama İşlemi |
+    .------------------.
+    .------------------------- 1000x1000 Double Matris çarpımı -------------------------.
+    | Seri Çarpım Komut   = time bin/seq data/mat_1000x1000.txt data/mat_1000x1000b.txt |
+    | OpenMP Çarpım Komut = time bin/omp data/mat_1000x1000.txt data/mat_1000x1000b.txt |
+    .-----------------------------------------------------------------------------------.
+    Seri çarpım ile geçem süre   :    0m5.762s REAL
+    OpenMP ile geçen toplam süre :    0m3.636s REAL
+
+    .-------------------------- 1000x1000 Float  Matris çarpımı --------------------------.
+    | Seri Çarpım Komut   = time bin/f_seq data/mat_1000x1000.txt data/mat_1000x1000b.txt |
+    | OpenMP Çarpım Komut = time bin/f_omp data/mat_1000x1000.txt data/mat_1000x1000b.txt |
+    .-------------------------------------------------------------------------------------.
+    Seri çarpım ile geçem süre   :    0m4.444s REAL
+    OpenMP ile geçen toplam süre :    0m3.199s REAL
+    .
+    .
+    .
+
 
 
 
