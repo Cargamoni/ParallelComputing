@@ -12,7 +12,7 @@ Bilgisayarınızın özelliklerini incelemek ve bu özelliklerin Matris çarpma 
 
 Proje soru cevapları ve proje dosyalarını açıklamadan önce, projeyi çalıştırmak için gerekli olan kütüphane dosyalarını, derleme esnasında yapılması gerekenlere dair bilgilendirmeleri yapıalcaktır.
 
-*NOT: Oneris her bir elemanı 1 olan matristir, evet ben uydurdum. (Vanris diye okunur).
+    NOT: Oneris her bir elemanı 1 olan matristir, evet ben uydurdum. (Vanris diye okunur).
 
 
 ## Nasıl Kullanılır ? 
@@ -52,6 +52,11 @@ Demo.sh Betiği, 2 adet 2x2 Matris, 2 adet 5x5 Matris, 2 adet 2x2 Oneris (1'lerd
     - Derleme İşlemi
     - Hesaplama İşlemi
     - Sonuçların Ekrana Basılması
+
+Proje dosyalarının içierisindeyken aşağıdaki komut ile beraber betik çalıştırılır.
+
+`cargamoni@universe:~/ParallelComputing$ ./Demo.sh`
+
 
 The aim is to multiply two matrices together.To multiply two matrices, the number of columns of the first matrix has to match the number of lines of the second matrix. The calculation of the matrix solution has independent steps, it is possible to parallelize the calculation.
 
