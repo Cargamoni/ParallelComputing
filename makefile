@@ -10,7 +10,9 @@
 # (ISO C99), Wall bayrağı sayesinde derleme esnasınad ekstra derleme hataları açılır, örnek olarak bir
 # değişken tanımlanmıp ama kullanılmamışsa normalde hata vermeyen derleyici hatayı ekrana basar. -g 
 # varsayılan debug bilgilendirmesini açar. GCC ile beraber openmp derlemesi yapılabilmesi için de -fopenmp
-# bayrağı kullanılır.
+# bayrağı kullanılır. Son olarak da Tune dediğimiz kısma değinecek olursak -O2 bayrağı ile beraber 
+# olabilecek en düşük boyutta derleme işleminin yapılması ve buna göre binary dosyalarının oluşturulması
+# sağlanmıştır.
 CC=gcc									
 CFLAGS= -Wall -std=gnu99 -g -fopenmp	
 LIBS=src/matrix.c
