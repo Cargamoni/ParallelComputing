@@ -152,7 +152,7 @@ veya daha genel kullanımdaki ve basitleştirilmiş formül için;
 
 ![FLOPS1](https://wikimedia.org/api/rest_v1/media/math/render/svg/4b9594923d35f31fac9244bbd3d3596c87fc05ca)
 
-Alttaki formülü kullanacak olursak, bilgisayarımın her bir Cycle'da yaptığı FP64 (Double-Precision Floating-Point Format) yani Double veri tipi ile yapılan işlemi sayısı 16dır. Bunu formüle uygulayacak olursak FLOPS = 4 * 2.60 * 16 = 166.4 GFLOPS değeri bulunur. Sağlaması için aşağıdaki Intel kaynağından kontrol edilebilir. FP32 (Single-Precision Floating-Point Format) yani Float veri tipi ile yapılan işlemi sayısı 32dır. Bunu formüle uygulayacak olursak FLOPS = 4 * 2.60 * 32 = 332.8 GFLOPS değeri bulunur. Sağlaması için aşağıdaki Intel kaynağından kontrol edilebilir. FP64 ve FP32'nin ne olduğuna dair bilgi de aşağıdan ##Kaynaklar dan bakılabilir. 
+Alttaki formülü kullanacak olursak, bilgisayarımın her bir Cycle'da yaptığı FP64 (Double-Precision Floating-Point Format) yani Double veri tipi ile yapılan işlemi sayısı 16dır. Bunu formüle uygulayacak olursak FLOPS = 4 * 2.60 * 16 = 166.4 GFLOPS değeri bulunur. Sağlaması için aşağıdaki Intel kaynağından kontrol edilebilir. FP32 (Single-Precision Floating-Point Format) yani Float veri tipi ile yapılan işlemi sayısı 32dır. Bunu formüle uygulayacak olursak FLOPS = 4 * 2.60 * 32 = 332.8 GFLOPS değeri bulunur. Sağlaması için aşağıdaki Intel kaynağından kontrol edilebilir. FP64 ve FP32'nin ne olduğuna dair bilgi de [Kaynaklar'dan](https://github.com/Cargamoni/ParallelComputing#kaynaklar) bakılabilir. 
 
     FP64 - FLOPS = 4 * 2.60 * 16 = 166.4 GFLOPS
     FP32 - FLOPS = 4 * 2.60 * 32 = 332.8 GFLOPS
@@ -160,7 +160,7 @@ Alttaki formülü kullanacak olursak, bilgisayarımın her bir Cycle'da yaptığ
 ## Kaynaklar
 FLOP/s Wikipedia Kaynağı -> ![Buradan](https://en.wikipedia.org/wiki/FLOPS) \
 Intel CPU Metrik Kaynağı -> ![Buradan](https://www.intel.com/content/dam/support/us/en/documents/processors/APP-for-Intel-Core-Processors.pdf) \
-FP64 ve FP32     Kaynağı -> ![Burdan](https://medium.com/@moocaholic/fp64-fp32-fp16-bfloat16-tf32-and-other-members-of-the-zoo-a1ca7897d407) \
+FP64 ve FP32     Kaynağı -> ![Burdan](https://medium.com/@moocaholic/fp64-fp32-fp16-bfloat16-tf32-and-other-members-of-the-zoo-a1ca7897d407) 
 
 
 
