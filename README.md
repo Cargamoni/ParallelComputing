@@ -39,7 +39,19 @@ Proje üzerindeki çalışma, GNU/Linux sistemler üzerinde denenmiş ve çalı�
 ### Kuıllanımı
 Aslında kullanımı gayet basit, öncelikle algoritmanın ve kodların çalıştığını Demo.sh çalıştırılarak görülebilir. Öncelikle bu komutu nasıl çalıştırıldığını ve çıktıya göz atalım. Bu bir Bash Betiğidir, çalıştırıldığı zaman içerisindeki Bash komutlarını sizin yerinize çalıştırılmaktadır. Bu oluşturulma esnasında olası hataların sebebi, gereksinimleri karşılayamamızdır, bir başka sebebi de bin veya data dizinleri proje dizini içerisinde yoksa, 'no such file or directory' hatası alınabilir.
 
-Demo.sh Betiği, 2 adet 2x2 Matris, 2 adet 5x5 Matris, 2 adet 2x2 Oneris (1'lerden oluşan matris, evet ben uydurdum.)  
+Demo.sh Betiği, 2 adet 2x2 Matris, 2 adet 5x5 Matris, 2 adet 2x2 Oneris (1'lerden oluşan matris, evet ben uydurdum.) ve son olarak da 2 adet 5x5 Oneris oluşturur. Daha sonra bunlar üzerinde matris çarpımını yaparak ekrana yazdırır. Hem demo hemde asıl programın koşması sırasıyla şu şekildedir,
+
+    RunMe.sh
+    - Matris Oluşturulması
+    - Derleme İşlemi
+    - Hesaplama İşlemi
+    - Hesaplama Sürelerinin Ekrana yazılması
+    
+    Demo.sh
+    - Matris Oluşturulması
+    - Derleme İşlemi
+    - Hesaplama İşlemi
+    - Sonuçların Ekrana Basılması
 
 The aim is to multiply two matrices together.To multiply two matrices, the number of columns of the first matrix has to match the number of lines of the second matrix. The calculation of the matrix solution has independent steps, it is possible to parallelize the calculation.
 

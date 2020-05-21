@@ -24,13 +24,13 @@ TUNE= -O2
 all: sequential omp f_sequential f_omp
 
 sequential:
-		$(CC) $(TUNE) $(CFLAGS) -o bin/seq $(LIBS) src/sequential.c
+	$(CC) $(TUNE) $(CFLAGS) -o bin/seq $(LIBS) src/sequential.c
 
 omp:
-		$(CC) $(TUNE) $(CFLAGS) -o bin/omp $(LIBS) src/omp.c
+	$(CC) $(TUNE) $(CFLAGS) -o bin/omp $(LIBS) src/omp.c
 
 f_sequential:
-		$(CC) $(TUNE) $(CFLAGS) -o bin/f_seq $(LIBS_F) src/f_sequential.c
+	$(CC) $(TUNE) $(CFLAGS) -o bin/f_seq $(LIBS_F) src/f_sequential.c
 
 f_omp:
-		$(CC) $(TUNE) $(CFLAGS) -o bin/f_omp $(LIBS_F) src/f_omp.c
+	$(CC) $(TUNE) $(CFLAGS) -o bin/f_omp $(LIBS_F) src/f_omp.c
