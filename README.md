@@ -144,9 +144,20 @@ Diğer çarpım işlemlerinin sonuçları da betik çalıştırılarak sonuçlar
 ## Proje Soruları
 
 ### 1. Bilgisayarınızın FLOP/s kapasitesi nedir ?
-lscpu komutuna göre Intel(R) Core(TM) i7-6700HQ mimarisinde 4 Adet Core 8 adet CPU mevcuttur. Her Core üzerinde de 2 Thread mevcuttur. CPU taban frekansı 2.6 GHz'dır. 
+lscpu komutuna göre Intel(R) Core(TM) i7-6700HQ mimarisinde 4 Adet Core 8 adet CPU mevcuttur. Her Core üzerinde de 2 Thread mevcuttur. CPU taban frekansı 2.6 GHz'dır. Denkleme bakacak olursak;
 
-![alt text](https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/IEEE_754_Double_Floating_Point_Format.svg/1236px-IEEE_754_Double_Floating_Point_Format.svg.png)
+![FLOPS1](https://wikimedia.org/api/rest_v1/media/math/render/svg/8e2d9e4d6fbefcb55359c89dba359ba920554525)
+
+veya daha genel kullanımdaki ve basitleştirilmiş formül için;
+
+![FLOPS1](https://wikimedia.org/api/rest_v1/media/math/render/svg/4b9594923d35f31fac9244bbd3d3596c87fc05ca)
+
+Alttaki formülü kullanacak olursak, bilgisayarımın her bir Cycle'da yaptığı FP64 (Double-Precision Floating-Point Format) yani Double veri tipi ile yapılan işlemi sayısı 16dır. Bunu formüle uygulayacak olursak FLOPS = 4 * 2.60 * 16 = 166.4 GFLOPS değeri bulunur. Sağlaması için aşağıdaki Intel kaynağından kontrol edilebilir. FP32 (Single-Precision Floating-Point Format) yani Float veri tipi ile yapılan işlemi sayısı 32dır. Bunu formüle uygulayacak olursak FLOPS = 4 * 2.60 * 32 = 332.8 GFLOPS değeri bulunur. Sağlaması için aşağıdaki Intel kaynağından kontrol edilebilir. FP64 ve FP32'nin ne olduğuna dair bilgi de aşağıdan bakılabilir. 
+
+FLOP/s Wikipedia Kaynağı -> ![Buradan](https://en.wikipedia.org/wiki/FLOPS)
+Intel CPU Metrik Kaynağı -> ![Buradan](https://www.intel.com/content/dam/support/us/en/documents/processors/APP-for-Intel-Core-Processors.pdf)
+FP64 ve FP32     Kaynağı -> ![Burdan](https://medium.com/@moocaholic/fp64-fp32-fp16-bfloat16-tf32-and-other-members-of-the-zoo-a1ca7897d407)
+
 
 
 
