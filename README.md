@@ -1,9 +1,3 @@
-
-#####    .-----------------------------------------------------.
-#####    | KTÜ Bilgisayar Mühendisliği - Paralel Bilgisayarlar |
-#####    |        Ahmetcan İRDEM - 357405 - II. Öğretim        |
-#####    .-----------------------------------------------------.
-
 # Parallel OpenMP Kullanarak Matris Çarpımı
 
 ## Özet
@@ -16,10 +10,30 @@ Projenin Konusu : Sistem Bilgisini İnceleme ve Matris Çarpımı
 ## Amaç
 Bilgisayarınızın özelliklerini incelemek ve bu özelliklerin Matris çarpma işlemine etkisi.
 
-    * Proje soru cevapları ve proje dosyalarını açıklamadan önce, projeyi çalıştırmak için gerekli olan kütüphane dosyalarını, derleme esnasında yapılması gerekenlere dair bilgilendirmeleri yapıalcaktır.
+Proje soru cevapları ve proje dosyalarını açıklamadan önce, projeyi çalıştırmak için gerekli olan kütüphane dosyalarını, derleme esnasında yapılması gerekenlere dair bilgilendirmeleri yapıalcaktır.
 
 
 ## Nasıl Kullanılır ? 
+
+### Gereksinimler
+Proje üzerindeki çalışma, GNU/Linux sistemler üzerinde denenmiş ve çalıştırılmıştır. Windows sistem üzerinde bir takım değişiklikler yapılması gerekmektedir. Örnek olarak vermek gerekirse, GCC ile derleme işlemi için ya MinGW ya da CygWin yüklenip, BASH kabuğu üzerinde Bash betiklerinin çalıştırılabilir hale getirilmesi gerekmektedir.
+
+    - GNU/Linux Gereksinimleri
+        python2.7
+        GCC
+        OpenMP
+            - libomp-dev paketi kurulu olmalıdır.
+            - Derleme esnasında -fopenmp bayrağı kullanılmalıdır.
+        Make
+            - Bazı dağıtımlarda make kurulu gelmez, ekstra olarak yüklemeniz gerekir.
+
+    - Windows Gereksinimleri
+        python2.7
+        MinGW veya CygWin (GCC, Make ve Bash)
+        OpenMP
+            - Normalde yüklü olarak geliyor, ancak nasıl kullanıldığını bilmiyorum.
+            GNU/Linux sistemlerde çalıştığım için araştırılıp öğrenilebilir.
+
 
 
 The aim is to multiply two matrices together.To multiply two matrices, the number of columns of the first matrix has to match the number of lines of the second matrix. The calculation of the matrix solution has independent steps, it is possible to parallelize the calculation.
