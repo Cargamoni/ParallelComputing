@@ -157,13 +157,23 @@ Alttaki formülü kullanacak olursak, bilgisayarımın her bir Cycle'da yaptığ
     FP64 - FLOPS = 4 * 2.60 * 16 = 166.4 GFLOPS
     FP32 - FLOPS = 4 * 2.60 * 32 = 332.8 GFLOPS
 
+### 2. Sisteminizdeki Cache belleğin özelliklerini açıklayınız, I-Cache - D-Cache kapasiteleri nedir ?
+Yine lscpu komutuna göre Intel(R) Core(TM) i7-6700HQ mimarisinde L3 Cache 6MB, L2 Cache 1MB, L1 Cache'de 256KB'dır. L1 Cache içerisinde I-Cache ve D-Cache bulunur ve her biri L1 Cache miktarının yarısı olan 128KB'dır.
+
+![Cache](https://gateoverflow.in/?qa=blob&qa_blobid=8952829199030697923)
+
+Önbellek neden vardır ? CPU ve RAM arasında uzun bir köprü olduğunu düşünün, sık sık kullandığınız bell başlı bir veri veya veriler var, ya da bir veri diğerlerinden çok daha önemli ve hızlıca erişmenize ihtiyacınız var. Bu durumda uzun köprüyü kat etmek yerine kendi içerisindeki ufak depolama alanlarında CPU bu verileri depolar ve ihtiyacı olduğu zamanlarda uzun bir yol kat etmek yerine buradan kullanır. 
+
+### 3. Tampon bellekler için 4-yönlü (4-way) ne demektir?
+
+...
+....
+.....
+
 ## Kaynaklar
 FLOP/s Wikipedia Kaynağı -> ![Buradan](https://en.wikipedia.org/wiki/FLOPS) \
 Intel CPU Metrik Kaynağı -> ![Buradan](https://www.intel.com/content/dam/support/us/en/documents/processors/APP-for-Intel-Core-Processors.pdf) \
 FP64 ve FP32     Kaynağı -> ![Burdan](https://medium.com/@moocaholic/fp64-fp32-fp16-bfloat16-tf32-and-other-members-of-the-zoo-a1ca7897d407) 
-
-
-
 
 
 The aim is to multiply two matrices together.To multiply two matrices, the number of columns of the first matrix has to match the number of lines of the second matrix. The calculation of the matrix solution has independent steps, it is possible to parallelize the calculation.
