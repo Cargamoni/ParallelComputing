@@ -1,8 +1,8 @@
 
-    ".-----------------------------------------------------."
-    "| KTÜ Bilgisayar Mühendisliği - Paralel Bilgisayarlar |"
-    "|        Ahmetcan İRDEM - 357405 - II. Öğretim        |"
-    ".-----------------------------------------------------."
+    .-----------------------------------------------------.
+    | KTÜ Bilgisayar Mühendisliği - Paralel Bilgisayarlar |
+    |        Ahmetcan İRDEM - 357405 - II. Öğretim        |
+    .-----------------------------------------------------.
 
 ##### Parallel OpenMP Kullanarak Matris Çarpımı
 
@@ -10,6 +10,7 @@
 Karadeniz Teknik Üniversitesi, Bilgisayar Mühendisliği Paralel Bilgisayarlar dersi projesi için buradayız. Burada hem sıralı bir şekilde lineer matris çarpımı, hemde OpenMP kullanılarak çoklu matris çarpımı yapılacaktır. Buradaki amaç tek CPU üzerinde yapılan işlemi parçalara bölerek en çok işlemi en kısa sürede yapmaktır. 
 
 Dersin Sorumlusu: Dr. İbrahim SAVRAN
+
 Projenin Konusu : Sistem Bilgisini İnceleme ve Matris Çarpımı
 
 ## Amaç
