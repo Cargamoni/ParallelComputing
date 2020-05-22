@@ -198,7 +198,30 @@ Standart paylaşımlı bellek modeli olan join/fork ile çalışmaktadır. Basit
         }
     }
 
+### 5.Çarpma işleminin sonucunu kolay test etmek için matrisleri “1.0” ile doldurabilirsiniz.
+    Oneris A:
+    1.0     1.0     1.0     1.0     1.0
+    1.0     1.0     1.0     1.0     1.0
+    1.0     1.0     1.0     1.0     1.0
+    1.0     1.0     1.0     1.0     1.0
+    1.0     1.0     1.0     1.0     1.0
 
+    Oneris B:
+    1.0     1.0     1.0     1.0     1.0
+    1.0     1.0     1.0     1.0     1.0
+    1.0     1.0     1.0     1.0     1.0
+    1.0     1.0     1.0     1.0     1.0
+    1.0     1.0     1.0     1.0     1.0
+
+    5.000000        5.000000        5.000000        5.000000        5.000000
+    5.000000        5.000000        5.000000        5.000000        5.000000
+    5.000000        5.000000        5.000000        5.000000        5.000000
+    5.000000        5.000000        5.000000        5.000000        5.000000
+    5.000000        5.000000        5.000000        5.000000        5.000000
+
+....
+..
+.
 
 ## Kaynaklar
 FLOP/s Wikipedia Kaynağı -> ![Buradan](https://en.wikipedia.org/wiki/FLOPS) \
