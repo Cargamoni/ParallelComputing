@@ -29,7 +29,7 @@ matrix_struct *get_matrix_struct(char matrix[]) {
     
     // Eğer dosya bulunamazsa bu noktada hata ekrana yazılır ve program sonlanır.
     if(myfile == NULL) {
-        printf("Error: The file you entered could not be found.\n");
+        printf("HATA: Girdiginiz dosya bulunamadi !\n");
         exit(EXIT_FAILURE);
     }
 
