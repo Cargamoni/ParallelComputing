@@ -219,9 +219,61 @@ Standart paylaşımlı bellek modeli olan join/fork ile çalışmaktadır. Basit
     5.000000        5.000000        5.000000        5.000000        5.000000
     5.000000        5.000000        5.000000        5.000000        5.000000
 
-....
-..
+### 6. Matris boyutlarını sırasıyla n=1K, 2K, ... 5K (K:bin) boyutlarında olacak şekilde çalıştırınız (yani 5 seri çarpım, 5 paralel çarpma işlemi yapacaksınız). Çarpma işleminde veri tanımı REEL olmalı ve işlemler REEL yapılmalıdır. Ve Hem FLOAT, hem de DOUBLE matrisler için çarpımlar yapmalısınız.
+    1000x1000 Double Matris çarpımı
+    Seri çarpım ile geçem süre   :    0m4.401s REAL
+    OpenMP ile geçen toplam süre :    0m3.034s REAL
+
+    1000x1000 Float  Matris çarpımı
+    Seri çarpım ile geçem süre   :    0m3.201s REAL
+    OpenMP ile geçen toplam süre :    0m2.842s REAL
+
+    2000x2000 Double Matris çarpımı
+    Seri çarpım ile geçem süre   :     0m49.659s REAL
+    OpenMP ile geçen toplam süre :     0m18.058s REAL
+
+    2000x2000 Float  Matris çarpımı
+    Seri çarpım ile geçem süre   :    0m44.849s REAL
+    OpenMP ile geçen toplam süre :    0m16.579s REAL
+
+    3000x3000 Double Matris çarpımı 
+    Seri çarpım ile geçem süre   :     3m11.264s REAL
+    OpenMP ile geçen toplam süre :     0m56.934s REAL
+
+    3000x3000 Float  Matris çarpımı
+    Seri çarpım ile geçem süre   :    2m42.554s REAL
+    OpenMP ile geçen toplam süre :    0m50.853s REAL
+
+    4000x4000 Double Matris çarpımı 
+    Seri çarpım ile geçem süre   :     8m27.023s REAL
+    OpenMP ile geçen toplam süre :     2m13.903s REAL
+
+    4000x4000 Float  Matris çarpımı 
+    Seri çarpım ile geçem süre   :    6m39.968s REAL
+    OpenMP ile geçen toplam süre :    1m57.217s REAL
+
+    5000x5000 Double Matris çarpımı
+    Seri çarpım ile geçem süre   :     18m3.273s REAL
+    OpenMP ile geçen toplam süre :     4m45.241s REAL
+
+    5000x5000 Float  Matris çarpımı
+    Seri çarpım ile geçem süre   :    13m38.047s REAL
+    OpenMP ile geçen toplam süre :    3m52.087s REAL
+
+### 7. Hazırladığınız FLOAT ve DOUBLE sürümlerde farklılık var mıdır?
+Evet yukarıda da görüldüğü üzere Float ve Double tipli sürümlerde farklılık mevcuttur. Bunun sebebi Double tipli değişkenlerin 64bit Float'ın ise 32bit alanda saklanmalarıdır. Hatta eğer Demo.sh çıktısını incelediğiniz zaman, devirli olan kısımlarda Float tipli verilerin devirden sonraki kısmının tutulamadığını görebilirsiniz. Hesaplamayı doğru yapmaktadır ancak devirli kısmı yukarıya yuvarlar.
+
+### 8. Sisteminizde belirtilen FLOP/s performans limitinin yüzde kaçına ulaşabildiniz, açıklayınız.
+...\
+..\
 .
+
+### 9. Veri paylaşım türlerine göre uygulamanızı geliştiriniz ve performans değişimlerinin var olup olmadığını açıklayınız.
+Veri paylaşımı OpenMP üzerinde Shared Memory sistemine göre çalışır, Süreçler belirli bir bellek bölgesine yazma ve okuma yaparak haberleşmeyi gerçekleştirir. Süreçler arası haberleşmedeki en basit teknik paylaşımlı bellek kullanımıdır. Bu yöntem aynı anda birden çok sürecinpaylaşımlı bir bellek ortamına erişimini sağlar. Süreçlerin hepsi aynı bellek bölgesini paylaştığı için, paylaşımlı bellek kavramı en hızlı IPC tekniğidir. Paylaşımlı bellek bölgesine erişim, sürecin kendine ait bellek bölgesineerişimi kadar hızlı gerçekleşir. Herhangi bir sistem çağrısını kullanmaya gerek yoktur. Aynı zamanda veriyi gereksizce kopyalamanın da önüne bu yöntemin kullanımıyla geçilir. Performans değişimleri de bu şekilde yaşanmıştır.
+
+### 10. Bu çarpma işlemlerinde elde ettiğiniz performans artışını yorumlayınız.
+Toplamda 110M (M:Milyon) çarpma işlemi yapılmıştır, tüm işlemler yaklaşık 1 saat 10 dk sürmüştür. Seri hesaplamalar toplamda süresi 54d24s, Paralel hesaplamalar da toplamda 15d16s sürmüştür. Seri işlemlere göre paralel işlemler zaman açısından 28% daha kısa sürmüştür. Tek CPU ile 8 CPU arasındaki fark daha fazla olmalıydı diye düşünüyorum, ancak bu da yeterli bir seviyedir. 18m3.273s süren Double 5000x5000 matris çarpımı 8 CPU ile 3m52.087s sürmektedir. Bu da zaman açısından fazlasıyla yeterli bir artıştır.
+
 
 ## Kaynaklar
 FLOP/s Wikipedia Kaynağı -> ![Buradan](https://en.wikipedia.org/wiki/FLOPS) \
@@ -229,91 +281,3 @@ Intel CPU Metrik Kaynağı -> ![Buradan](https://www.intel.com/content/dam/suppo
 FP64 ve FP32     Kaynağı -> ![Burdan](https://medium.com/@moocaholic/fp64-fp32-fp16-bfloat16-tf32-and-other-members-of-the-zoo-a1ca7897d407) \
 4-Way Buffer     Kaynağı -> ![Burdan](https://www.sciencedirect.com/topics/computer-science/set-associative-cache)
 
-
-The `README.*` contains this document as a Markdown and a PDF file.
-The python script `random_float_matrix.py` generates `n x m` float matrices (This script is inspired by Philip Böhm's solution).
-`./Test-Script.sh` is a script that generates test matrices with the python script, compiles the C-programs with `make` and executes the diffrent binaries with the test-matrices. The output of the script are the execution times of the particular implementations.
-
-## Makefile
-    CC=gcc
-    CFLAGS= -Wall -std=gnu99 -g -fopenmp
-    LIBS=src/matrix.c
-    LIBS_F= src/f_matrix.c
-    TUNE= -O2
-    
-    all: sequential omp thread2 mpi
-    
-    sequential:
-    		$(CC) $(TUNE) $(CFLAGS) -o bin/seq $(LIBS) src/sequential.c
-    
-    omp:
-    		$(CC) $(TUNE) $(CFLAGS) -o bin/omp $(LIBS) src/omp.c
-    
-
-`make` translates all implementations. The binary files are then in the `bin/` directory.
-The implementation `thread2.c` is the final solution of the *thread* subtask. `thread.c` was my first runnable solution but it is not fast(every row has one thread). I decided to keep it anyway, for a comparable set.
-For the compiler optimization I have chosen "-02", the execution time was best here.
-
-## Example
-Every implementation needs 2 matrix files as program argument to calculate the result matrix to `stdout` (`bin/seq mat_file_1.txt mat_file_2.txt`).
-The `rows` are seperated by newlines(`\n`) and the columns are seperated by tabular(`\t`). The reason is the pretty output on the shell. All implementations calculate with floating-point numbers.
-
-    [mp432@localhost]% cat data/mat_4_5.txt 
-    97.4549968447	4158.04953246	2105.6723138	9544.07472156	2541.05960201
-    1833.23353473	9216.3834844	8440.75797842	1689.62403742	4686.03507194
-    5001.05053096	7289.39586628	522.921369146	7057.57603906	7637.9829023
-    737.191477364	4515.30312019	1370.71005027	9603.48073923	7543.51110732
-    
-    [mp432@localhost]% cat data/mat_5_4.txt 
-    8573.64127861	7452.4636398	9932.62634628	1261.340226
-    7527.08499112	3872.81522875	2815.39747607	5735.65492468
-    7965.24212592	7428.31976294	290.255638815	5940.92582147
-    6175.98390217	5995.21703679	6778.73998746	9060.90690747
-    2006.95378498	6098.70324661	619.384482373	1396.62426963
-    
-    [mp432@localhost]% bin/seq data/mat_4_5.txt data/mat_5_4.txt
-    112949567.256707	105187212.450287	79556423.335490    126508582.287008	
-    172162416.208937	150764506.000392	60962563.539173    127174399.969315	
-    160826865.507086	158278548.934611	122920214.859773   125839554.344572	
-    125675943.680898	136743486.943968	90204309.448167	   132523052.230353	
-
-
-## Performance Test
-The `sirius cluster` was not available during task processing (specifically for the MPI program). Therefore, all performance tests were run on `atlas`.
-
-    [mp432@atlas Parallel-Matrix-Multiplication-master]$ ./Test-Script.sh 
-    generate test-matrices with python if no test data found
-    
-    generate 5x4 matrix...
-    generate 100x100 matrix...
-    generate 1000x1000 matrix...
-    generate 5000x5000 matrix...
-    compile...
-    
-    gcc -O2 -Wall -std=gnu99 -g -fopenmp -o bin/seq src/matrix.c src/sequential.c
-    gcc -O2 -Wall -std=gnu99 -g -fopenmp -o bin/omp src/matrix.c src/omp.c
-    gcc -O2 -Wall -std=gnu99 -g -fopenmp -pthread -o bin/thread2 src/matrix.c src/thread2.c
-    mpicc -O2 -Wall -std=gnu99 -g -fopenmp -o bin/mpi src/matrix.c src/mpi.c
-    
-    calculate...
-    
-    * * * * * * * 100x100 Matrix
-    with sequential    0m0.032s
-    with omp           0m0.034s
-    with thread2       0m0.032s
-    with mpi(4p)       0m1.242s
-
-    * * * * * * * 1000x1000 Matrix
-    with sequential    0m11.791s
-    with omp           0m4.182s
-    with thread2       0m4.153s
-    with mpi(4p)       0m12.682s
-    
-    * * * * * * * 5000x5000 Matrix
-    with sequential    26m52.342s
-    with omp           4m57.186s
-    with thread2       5m5.767s
-    with mpi(4p)       5m2.174s
-    
-The output times are the `real times` from the unix `time` command. 
-You can see the advantages of parallel computation in the last matrix calculation. The parallel calculation is about 5 times faster (for large matrices).
