@@ -272,20 +272,20 @@ Veri paylaşımı OpenMP üzerinde Shared Memory sistemine göre çalışır, S�
 ### 10. Bu çarpma işlemlerinde elde ettiğiniz performans artışını yorumlayınız.
 Toplamda 110M (M:Milyon) çarpma işlemi yapılmıştır, tüm işlemler yaklaşık 1 saat 10 dk sürmüştür. Seri hesaplamalar toplamda süresi 54d24s, Paralel hesaplamalar da toplamda 15d16s sürmüştür. Seri işlemlere göre paralel işlemler zaman açısından 28% daha kısa sürmüştür. Tek CPU ile 8 CPU arasındaki fark daha fazla olmalıydı diye düşünüyorum, ancak bu da yeterli bir seviyedir. 18m3.273s süren Double 5000x5000 matris çarpımı 8 CPU ile 3m52.087s sürmektedir. Bu da zaman açısından fazlasıyla yeterli bir artıştır. Aşağıda da speedup değerlerini görebilirsiniz;
 
-1000x1000 Çarpımda Double Speedup =      4.401 / 3.034 = 1.45056
-1000x1000 Çarpımda Float  Speedup =      3.201 / 2.842 = 1.12632
+    1000x1000 Çarpımda Double Speedup =      4.401 / 3.034 = 1.45056
+    1000x1000 Çarpımda Float  Speedup =      3.201 / 2.842 = 1.12632
 
-2000x2000 Çarpımda Double Speedup =    49.659 / 18.058 = 2.74997
-2000x2000 Çarpımda Float  Speedup =    44.849 / 16.579 = 2.70517
+    2000x2000 Çarpımda Double Speedup =    49.659 / 18.058 = 2.74997
+    2000x2000 Çarpımda Float  Speedup =    44.849 / 16.579 = 2.70517
 
-3000x3000 Çarpımda Double Speedup =   191.264 / 56.934 = 3.3594
-3000x3000 Çarpımda Float  Speedup =   162.554 / 50.853 = 3.19655
+    3000x3000 Çarpımda Double Speedup =   191.264 / 56.934 = 3.3594
+    3000x3000 Çarpımda Float  Speedup =   162.554 / 50.853 = 3.19655
 
-4000x4000 Çarpımda Double Speedup =  507.023 / 133.903 = 3.78649
-4000x4000 Çarpımda Float  Speedup =  399.968 / 117.217 = 3.4122
+    4000x4000 Çarpımda Double Speedup =  507.023 / 133.903 = 3.78649
+    4000x4000 Çarpımda Float  Speedup =  399.968 / 117.217 = 3.4122
 
-5000x5000 Çarpımda Double Speedup = 1083.273 / 285.241 = 3.79775
-5000x5000 Çarpımda Float  Speedup =  818.047 / 232.087 = 3.52474
+    5000x5000 Çarpımda Double Speedup = 1083.273 / 285.241 = 3.79775
+    5000x5000 Çarpımda Float  Speedup =  818.047 / 232.087 = 3.52474
 
 ## Kaynaklar
 FLOP/s Wikipedia Kaynağı -> ![Buradan](https://en.wikipedia.org/wiki/FLOPS) \
