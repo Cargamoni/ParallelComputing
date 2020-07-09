@@ -1,7 +1,6 @@
 #!/bin/bash
 echo ".-----------------------------------------------------."
 echo "| KTÜ Bilgisayar Mühendisliği - Paralel Bilgisayarlar |"
-echo "|        Ahmetcan İRDEM - 357405 - II. Öğretim        |"
 echo ".-----------------------------------------------------."
 echo
 echo "Test Matrisleri Oluşturuluyor, eğer test matrisleri mevcutsa yeniden oluşturulmayacaktır."
