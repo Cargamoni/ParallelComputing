@@ -59,7 +59,6 @@ Proje dosyalarının içierisindeyken aşağıdaki komut ile beraber betik çal�
     $ ./Demo.sh
     .-----------------------------------------------------.
     | KTÜ Bilgisayar Mühendisliği - Paralel Bilgisayarlar |
-    |        Ahmetcan İRDEM - 357405 - II. Öğretim        |
     .-----------------------------------------------------.
 
     Test Matrisleri Oluşturuluyor, eğer test matrisleri mevcutsa yeniden oluşturulmayacaktır.
@@ -110,7 +109,6 @@ Betik sırasıyla 1000x1000, 2000x2000, 3000x3000, 4000x4000 ve son olarak 5000x
     $ ./RunMe.sh
     .-----------------------------------------------------.
     | KTÜ Bilgisayar Mühendisliği - Paralel Bilgisayarlar |
-    |        Ahmetcan İRDEM - 357405 - II. Öğretim        |
     .-----------------------------------------------------.
 
     Test Matrisleri Oluşturuluyor, eğer test matrisleri mevcutsa yeniden oluşturulmayacaktır.
@@ -292,5 +290,6 @@ Toplamda 110M (M:Milyon) çarpma işlemi yapılmıştır, tüm işlemler yaklaş
 FLOP/s Wikipedia Kaynağı -> ![Buradan](https://en.wikipedia.org/wiki/FLOPS) \
 Intel CPU Metrik Kaynağı -> ![Buradan](https://www.intel.com/content/dam/support/us/en/documents/processors/APP-for-Intel-Core-Processors.pdf) \
 FP64 ve FP32     Kaynağı -> ![Burdan](https://medium.com/@moocaholic/fp64-fp32-fp16-bfloat16-tf32-and-other-members-of-the-zoo-a1ca7897d407) \
-4-Way Buffer     Kaynağı -> ![Burdan](https://www.sciencedirect.com/topics/computer-science/set-associative-cache)
+4-Way Buffer     Kaynağı -> ![Burdan](https://www.sciencedirect.com/topics/computer-science/set-associative-cache)\
+Projenin         Kaynağı -> ![Burdan](https://github.com/mperlet/matrix_multiplication)
 
